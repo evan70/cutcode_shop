@@ -24,10 +24,10 @@ class ProductFactory extends Factory
 //            'thumbnail' => $this->faker->image(
 //                storage_path('app/public/images/products'),
 //            ),
-            'thumbnail' => $this->faker->picsum(
-                'images/products',
-            ),
+            'thumbnail' => $this->faker->picsum('products', 'images/products'),
             'price' => $this->faker->numberBetween(1000, 100000),
+            'on_home_page' => $this->faker->boolean(),
+            'sorting' => $this->faker->numberBetween(1, 999)
         ];
     }
 }
